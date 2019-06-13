@@ -2,7 +2,7 @@ const app = new Vue({
   el: '#app',
   template: '#ejemplo',
   data: {
-    mostrar: true,
+    showTable: false,
     mensaje: "Poor Man's Twitter",
     tweets: [],
     obj: {
@@ -25,6 +25,7 @@ const app = new Vue({
       console.log("Este es el parametro",param)
     },
     getTweets: function () {
+      this.showTable = true;
       axios
         .get('http://localhost:8080/tweet/')
         .then(response => { 

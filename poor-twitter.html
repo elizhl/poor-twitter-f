@@ -48,10 +48,10 @@
             </button>
           </div>
           <br />
-          <span class="tweet-form-title">
+          <span class="tweet-form-title" v-if="showTable">
             Tweets
           </span>
-          <div class="row col-xs-12 p-50">
+          <div class="row col-xs-12 p-50" v-if="showTable">
             <table class="table" id="myTable">
               <thead>
                 <tr>
